@@ -24,7 +24,7 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-chatapi",
+    "start": "egg-scripts start --port=7001 --daemon --title=egg-server-chatapi",
     "stop": "egg-scripts stop --title=egg-server-chatapi",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
