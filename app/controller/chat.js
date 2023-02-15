@@ -24,7 +24,7 @@ class ChatController extends Controller {
     const res = await api.sendMessage(ctx.request.body.message);
     console.log(res.text);
     ctx.body = res.text;
-    ctx.status = 201;
+    ctx.status = 200;
   }
 }
 
