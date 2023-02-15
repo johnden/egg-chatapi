@@ -26,6 +26,18 @@ class ChatController extends Controller {
     ctx.body = res.text;
     ctx.status = 200;
   }
+
+  async getChat() {
+    const { ctx } = this;
+    console.log(ctx);
+    // To use ESM in CommonJS, you can use a dynamic import
+    const { ChatGPTAPI } = await import('chatgpt');
+    const api = new ChatGPTAPI({ apiKey: process.env.OPENAI_API_KEY });
+    const res = await api.sendMessage(ctx.query.message);
+    console.log(res.text);
+    ctx.body = res.text;
+    ctx.status = 200;
+  }
 }
 
 module.exports = ChatController;
