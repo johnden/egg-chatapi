@@ -10,6 +10,7 @@
     "chatgpt": "^4.3.2",
     "dotenv": "^16.0.3",
     "egg": "^3",
+    "egg-cors": "^2.2.3",
     "egg-scripts": "^2",
     "egg-validate": "^2.0.2"
   },
