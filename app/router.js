@@ -11,8 +11,8 @@ module.exports = app => {
   // router.post('/chat', controller.chat.chat);
 
   app.use(async (ctx, next) => {
-    ctx.set("Access-Control-Allow-Origin", "*"); // 允许任意域名
-    // 或者 ctx.set("Access-Control-Allow-Origin", "http://example.com"); // 允许指定域名
+    ctx.set('Access-Control-Allow-Origin', '*'); // 允许任意域名
+    // 或者 ctx.set('Access-Control-Allow-Origin', 'http://example.com'); // 允许指定域名
     await next();
   });
 };
